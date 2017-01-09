@@ -11,9 +11,9 @@
 var options = {
   directories: {
     stylesheet: {
-      input:  'scss/app.scss',
-      output: '../public/css',
-      watch: './scss/**/*.scss'
+      input:  './scss/style.scss',
+      output: '../public/',
+      watch: ['./scss/**/*.scss', './scss/*', './scss/**/*']
     },
     javascript: {
       input: 'js/**/*.js',
@@ -33,27 +33,27 @@ var options = {
     errorReporting: 1,
     stylesheet: {
       enabled: true,
-      linter: true,
+      linter: false,
       minify: true,
       concat: true,
       notify: true
     },
     javascript: {
-      enabled: true,
+      enabled: false,
       linter: true,
       minify: true,
       concat: false,
       notify: false
     },
     image: {
-      enabled: true,
+      enabled: false,
       minify: true,
-      notify: false,
+      notify: false
     },
     browsersync: {
       enabled: true,
-      proxy: 'development.forum.viva.nl',
-      notify: false,
+      proxy: 'development.domain',
+      notify: true
     }
   }
 }
